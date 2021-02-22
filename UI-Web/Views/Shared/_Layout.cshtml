@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Site Metas -->
+    <title>Game Info</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="" type="~/image/x-icon" />
+    <link rel="apple-touch-icon" href="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/Front-css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="~/Content/Front-css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="~/Content/Front-css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/Front-css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/Front-css/custom.css">
+    <!-- font family -->
+    <link href="~/Content/Front-css/CssFamilyPoppins.css" rel="stylesheet" />
+    <!-- end font family -->
+    <link rel="stylesheet" href="~/Content/Front-css/3dslider.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Front-css/jqueryscripttop.css" />
+
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="game_info" data-spy="scroll" data-target=".header">
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="~/images/loading-img.gif" alt="">
+    </div>
+    <!-- END LOADER -->
+    <section id="body-content">
+            @RenderBody()
+    </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="@Url.Content("~/Scripts/Front-js/all.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Front-js/custom.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Front-js/3dslider.js")" type="text/javascript"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
